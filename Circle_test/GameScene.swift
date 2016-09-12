@@ -14,13 +14,14 @@ class GameScene: SKScene {
     let manager = CMMotionManager()
     var crosshair = SKSpriteNode()
     
-    override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
+    func drawTarget(){
         
-        scene?.backgroundColor = SKColor.blackColor()
-
+        let x_position = CGFloat(arc4random_uniform(UInt32(frame.size.width-100)+50))
+        let y_position = CGFloat(arc4random_uniform(UInt32(frame.size.height-100)+50))
+        
         let OuterRing = SKShapeNode(circleOfRadius: 100 ) // Size of Circle
-        OuterRing.position = CGPointMake(frame.midX, frame.midY)  //Middle of Screen
+        OuterRing.name = "outerring";
+        OuterRing.position = CGPointMake(x_position, y_position)  //Middle of Screen
         OuterRing.zPosition = -1.0
         OuterRing.strokeColor = SKColor.blackColor()
         OuterRing.glowWidth = 1.0
@@ -28,7 +29,8 @@ class GameScene: SKScene {
         self.addChild(OuterRing)
         
         let OuterRing2 = SKShapeNode(circleOfRadius: 80 ) // Size of Circle
-        OuterRing2.position = CGPointMake(frame.midX, frame.midY)  //Middle of Screen
+        OuterRing2.name = "outerring2";
+        OuterRing2.position = CGPointMake(x_position, y_position)  //Middle of Screen
         OuterRing2.zPosition = -1.0
         OuterRing2.strokeColor = SKColor.whiteColor()
         OuterRing2.glowWidth = 1.0
@@ -36,7 +38,8 @@ class GameScene: SKScene {
         self.addChild(OuterRing2)
         
         let MiddleRing = SKShapeNode(circleOfRadius: 60 ) // Size of Circle
-        MiddleRing.position = CGPointMake(frame.midX, frame.midY)  //Middle of Screen
+        MiddleRing.name = "middlering";
+        MiddleRing.position = CGPointMake(x_position, y_position)  //Middle of Screen
         MiddleRing.zPosition = -1.0
         MiddleRing.strokeColor = SKColor.blackColor()
         MiddleRing.glowWidth = 1.0
@@ -44,7 +47,8 @@ class GameScene: SKScene {
         self.addChild(MiddleRing)
         
         let InnerRing = SKShapeNode(circleOfRadius: 40 ) // Size of Circle
-        InnerRing.position = CGPointMake(frame.midX, frame.midY)  //Middle of Screen
+        InnerRing.name = "innerring";
+        InnerRing.position = CGPointMake(x_position, y_position)  //Middle of Screen
         InnerRing.zPosition = -1.0
         InnerRing.strokeColor = SKColor.blackColor()
         InnerRing.glowWidth = 1.0
@@ -52,12 +56,31 @@ class GameScene: SKScene {
         self.addChild(InnerRing)
         
         let BullsEye = SKShapeNode(circleOfRadius: 20 ) // Size of Circle
-        BullsEye.position = CGPointMake(frame.midX, frame.midY)  //Middle of Screen
+        BullsEye.name = "bullseye";
+        BullsEye.position = CGPointMake(x_position, y_position)  //Middle of Screen
         BullsEye.zPosition = -1.0
         BullsEye.strokeColor = SKColor.blackColor()
         BullsEye.glowWidth = 1.0
         BullsEye.fillColor = SKColor.yellowColor()
         self.addChild(BullsEye)
+        
+    }
+    
+    func destroyTarget(){
+//        self.removeFromParent(OuterRing)
+//        self.removeFromParent(OuterRing2)
+//        self.removeFromParent(MiddleRing)
+//        self.removeFromParent(InnerRing)
+//        self.removeFromParent(BullsEye)
+    }
+
+    
+    override func didMoveToView(view: SKView) {
+        /* Setup your scene here */
+        
+        scene?.backgroundColor = SKColor.blackColor()
+        
+        drawTarget()
         
         // manager.startGyroUpdates()
         manager.deviceMotionUpdateInterval=0.1
@@ -65,14 +88,18 @@ class GameScene: SKScene {
             (data,error) in
             
             self.physicsWorld.gravity = CGVectorMake(CGFloat((data?.attitude.roll)!*8),CGFloat(((data?.attitude.pitch)! - 0.8) * (-8)))
+            //print(self.crosshair.position)
         }
         // physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
         
         crosshair = SKSpriteNode(imageNamed: "crosshairs.png")
-        crosshair.position = CGPointMake(frame.midX-500, frame.midY-500)
+        crosshair.position = CGPointMake(frame.midX, frame.midY)
         crosshair.physicsBody = SKPhysicsBody(circleOfRadius: 20)
-//        crosshair.physicsBody?.dynamic = true
+        crosshair.physicsBody?.dynamic = true
+        crosshair.physicsBody?.allowsRotation = false
+        
         // crosshair.physicsBody!.affectedByGravity = false
+        self.addChild(crosshair)
         
 
 
@@ -88,20 +115,27 @@ class GameScene: SKScene {
        /* Called when a touch begins */
         
         for touch in touches {
-            let location = touch.locationInNode(self)
+        //  let location = touch.locationInNode(self)
+            let location = childNodeWithName("bullseye")!.position
+            print("this is the distance")
+            if sqrt(Double(pow(Double(crosshair.position.x - location.x),2)+pow(Double(crosshair.position.y - location.y),2))) < 100  {
+
+                // remove target
+                childNodeWithName("outerring")!.removeFromParent()
+                childNodeWithName("outerring2")!.removeFromParent()
+                childNodeWithName("middlering")!.removeFromParent()
+                childNodeWithName("innerring")!.removeFromParent()
+                childNodeWithName("bullseye")!.removeFromParent()
+
+                // redraw target
+                drawTarget()
+            }
             
-            let shape = SKShapeNode(circleOfRadius: 10)
-            shape.strokeColor = SKColor.blackColor()
-            shape.fillColor = SKColor.greenColor()
-            shape.xScale = 0.5
-            shape.yScale = 0.5
-            shape.position = location
             
 //            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
             
 //            sprite.runAction(SKAction.repeatActionForever(action))
             
-            self.addChild(shape)
         }
     }
     
