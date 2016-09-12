@@ -64,13 +64,14 @@ class GameScene: SKScene {
         manager.startDeviceMotionUpdatesToQueue(NSOperationQueue.mainQueue()){
             (data,error) in
             
-            self.physicsWorld.gravity = CGVectorMake(CGFloat((data?.attitude.roll)!*10),CGFloat(((data?.attitude.pitch)! - 1) * (-10)))
+            self.physicsWorld.gravity = CGVectorMake(CGFloat((data?.attitude.roll)!*8),CGFloat(((data?.attitude.pitch)! - 0.8) * (-8)))
         }
         // physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
         
         crosshair = SKSpriteNode(imageNamed: "crosshairs.png")
         crosshair.position = CGPointMake(frame.midX-500, frame.midY-500)
         crosshair.physicsBody = SKPhysicsBody(circleOfRadius: 20)
+//        crosshair.physicsBody?.dynamic = true
         // crosshair.physicsBody!.affectedByGravity = false
         
 

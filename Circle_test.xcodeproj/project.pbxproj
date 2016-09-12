@@ -13,7 +13,6 @@
 		946034FB1D833D490050482E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946034FA1D833D490050482E /* GameScene.swift */; };
 		946034FD1D833D490050482E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946034FC1D833D490050482E /* GameViewController.swift */; };
 		946035001D833D490050482E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 946034FE1D833D490050482E /* Main.storyboard */; };
-		946035021D833D490050482E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946035011D833D490050482E /* Assets.xcassets */; };
 		946035051D833D490050482E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 946035031D833D490050482E /* LaunchScreen.storyboard */; };
 		946035101D833D490050482E /* Circle_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9460350F1D833D490050482E /* Circle_testTests.swift */; };
 		9460351B1D833D490050482E /* Circle_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9460351A1D833D490050482E /* Circle_testUITests.swift */; };
@@ -44,7 +43,6 @@
 		946034FA1D833D490050482E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = Circle_test/GameScene.swift; sourceTree = SOURCE_ROOT; };
 		946034FC1D833D490050482E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		946034FF1D833D490050482E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		946035011D833D490050482E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "/Users/jenzeller/Desktop/iOS Team/Circle_test/Circle_test/Assets.xcassets"; sourceTree = "<absolute>"; };
 		946035041D833D490050482E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		946035061D833D490050482E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9460350B1D833D490050482E /* Circle_testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Circle_testTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,7 +106,6 @@
 				946034FA1D833D490050482E /* GameScene.swift */,
 				946034FC1D833D490050482E /* GameViewController.swift */,
 				946034FE1D833D490050482E /* Main.storyboard */,
-				946035011D833D490050482E /* Assets.xcassets */,
 				04419AA01D846D1C00FAF4C4 /* Assets.xcassets */,
 				946035031D833D490050482E /* LaunchScreen.storyboard */,
 				946035061D833D490050482E /* Info.plist */,
@@ -241,7 +238,6 @@
 			files = (
 				946034F91D833D490050482E /* GameScene.sks in Resources */,
 				946035051D833D490050482E /* LaunchScreen.storyboard in Resources */,
-				946035021D833D490050482E /* Assets.xcassets in Resources */,
 				946035001D833D490050482E /* Main.storyboard in Resources */,
 				04419AA11D846D1C00FAF4C4 /* Assets.xcassets in Resources */,
 			);
