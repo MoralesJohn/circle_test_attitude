@@ -202,7 +202,11 @@
 				TargetAttributes = {
 					946034F21D833D490050482E = {
 						CreatedOnToolsVersion = 7.3.1;
+<<<<<<< HEAD
 						DevelopmentTeam = 7L4MTHDFPZ;
+=======
+						DevelopmentTeam = TTT5AMJSE2;
+>>>>>>> 10330dba58a5e38994db859fa86509c7dd58efbe
 					};
 					9460350A1D833D490050482E = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -418,7 +422,11 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Circle_test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = "surya.com.Team-Jamaica.Circle-test";
+=======
+				PRODUCT_BUNDLE_IDENTIFIER = "Team-Jamaica.Circle-test";
+>>>>>>> 10330dba58a5e38994db859fa86509c7dd58efbe
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -432,7 +440,11 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Circle_test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = "surya.com.Team-Jamaica.Circle-test";
+=======
+				PRODUCT_BUNDLE_IDENTIFIER = "Team-Jamaica.Circle-test";
+>>>>>>> 10330dba58a5e38994db859fa86509c7dd58efbe
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
