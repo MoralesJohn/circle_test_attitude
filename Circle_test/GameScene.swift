@@ -131,7 +131,7 @@ class GameScene: SKScene {
                 drawTarget()
             }
             
-            
+            runAction(SKAction.playSoundFileNamed("174436__drminky__laser-gun-ice-beam.caf", waitForCompletion: false))
 //            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
             
 //            sprite.runAction(SKAction.repeatActionForever(action))
