@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04419AA11D846D1C00FAF4C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04419AA01D846D1C00FAF4C4 /* Assets.xcassets */; };
+		2C183DAE1D873D7D006DF36F /* 174436__drminky__laser-gun-ice-beam.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2C183DAD1D873D7D006DF36F /* 174436__drminky__laser-gun-ice-beam.caf */; };
 		946034F71D833D490050482E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946034F61D833D490050482E /* AppDelegate.swift */; };
 		946034F91D833D490050482E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 946034F81D833D490050482E /* GameScene.sks */; };
 		946034FB1D833D490050482E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946034FA1D833D490050482E /* GameScene.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		04419AA01D846D1C00FAF4C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C183DAD1D873D7D006DF36F /* 174436__drminky__laser-gun-ice-beam.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "174436__drminky__laser-gun-ice-beam.caf"; sourceTree = "<group>"; };
 		946034F31D833D490050482E /* Circle_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circle_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		946034F61D833D490050482E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		946034F81D833D490050482E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				946034F61D833D490050482E /* AppDelegate.swift */,
+				2C183DAD1D873D7D006DF36F /* 174436__drminky__laser-gun-ice-beam.caf */,
 				946034F81D833D490050482E /* GameScene.sks */,
 				946034FA1D833D490050482E /* GameScene.swift */,
 				946034FC1D833D490050482E /* GameViewController.swift */,
@@ -199,7 +202,7 @@
 				TargetAttributes = {
 					946034F21D833D490050482E = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = L5HNYRHDWC;
+						DevelopmentTeam = 7L4MTHDFPZ;
 					};
 					9460350A1D833D490050482E = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -240,6 +243,7 @@
 				946035051D833D490050482E /* LaunchScreen.storyboard in Resources */,
 				946035001D833D490050482E /* Main.storyboard in Resources */,
 				04419AA11D846D1C00FAF4C4 /* Assets.xcassets in Resources */,
+				2C183DAE1D873D7D006DF36F /* 174436__drminky__laser-gun-ice-beam.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +418,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Circle_test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "John-Morales.Team-Jamaica.Circle-test";
+				PRODUCT_BUNDLE_IDENTIFIER = "surya.com.Team-Jamaica.Circle-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -428,7 +432,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Circle_test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "John-Morales.Team-Jamaica.Circle-test";
+				PRODUCT_BUNDLE_IDENTIFIER = "surya.com.Team-Jamaica.Circle-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
